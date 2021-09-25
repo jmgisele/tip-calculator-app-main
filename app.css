@@ -177,10 +177,12 @@ input:checked+label {
 }
 
 #bill:focus, #num-of-ppl:focus{
+    outline-style: solid;
     outline-color: hsl(172, 67%, 45%);
 }
 
 #custom:focus {
+    outline-style: solid;
     outline-color: hsl(172, 67%, 45%);
 }
 
