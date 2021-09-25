@@ -18,52 +18,57 @@
 </head>
 
 <body>
-  <div id="flex-container">
-    <a href="#" id="logo" tabindex="-1"><img id="logo-image" alt="" src="images/logo.svg"></a>
-    <div id="calc-container">
-      <form class="main-col" id="calc-flex">
-        <label for="bill" class="form-label">Bill</label>
-        <div class="form-icon-box"> <a href="#" class="icon" tabindex="-1"><img alt="" src="images/icon-dollar.svg"></a>
-          <input type="number" class="number-input" id="bill" placeholder="0">
+  <main>
+    <div id="flex-container">
+      <img id="logo-image" alt="" src="images/logo.svg">
+      <div id="calc-container">
+        <form class="main-col" id="calc-flex">
+          <label for="bill" class="form-label">Bill</label>
+          <div class="form-icon-box"><img class="icon" alt=""
+                src="images/icon-dollar.svg">
+            <input type="number" class="number-input" id="bill" placeholder="0">
+          </div>
+          <label class="form-label" for="tippercent">Select Tip %</label>
+          <div id="radio-grid">
+            <input type="radio" class="radio-input" id="fivepercent" name="tippercent" value="5">
+            <label for="fivepercent" class="radio-label">5%</label><br>
+            <input type="radio" class="radio-input" id="tenpercent" name="tippercent" value="10">
+            <label for="tenpercent" class="radio-label">10%</label><br>
+            <input type="radio" class="radio-input" id="fifteenpercent" name="tippercent" value="15">
+            <label for="fifteenpercent" class="radio-label">15%</label><br>
+            <input type="radio" class="radio-input" id="twentyfivepercent" name="tippercent" value="25">
+            <label for="twentyfivepercent" class="radio-label">25%</label><br>
+            <input type="radio" class="radio-input" id="fiftypercent" name="tippercent" value="50">
+            <label for="fiftypercent" class="radio-label">50%</label><br>
+            <input type="number" tabindex="-1" class="radio-label" id="custom" name="tippercent"
+              onfocus="this.placeholder=''" onfocusout="this.placeholder='Custom'" placeholder="Custom">
+          </div>
+          <div id="ppl-box">
+            <label for="num-of-ppl" class="form-label">Number of People</label>
+            <span id="zero-case">Can't be zero</span>
+          </div>
+          <div class="form-icon-box">
+            <img class="icon" alt="" src="images/icon-person.svg">
+            <input type="number" class="number-input" id="num-of-ppl" placeholder="0">
+          </div>
+        </form>
+        <div class="main-col" id="results-container">
+          <div class="small-box">
+            <h2 class="tip-big">Tip Amount</h2>
+            <h3 class="tip-small">/ person</h3>
+            <h2 class="total" id="tip-per-person">$0.00</h2>
+          </div>
+          <div class="small-box">
+            <h2 class="tip-big">Total</h2>
+            <h3 class="tip-small">/ person</h3>
+            <h2 class="total" id="total-per-person">$0.00</h2>
+          </div>
+          <button id="reset">Reset</button>
         </div>
-        <label class="form-label" for="tippercent">Select Tip %</label>
-        <div id="radio-grid">
-          <input type="radio" class="radio-input" id="fivepercent" name="tippercent" value="5">
-          <label for="fivepercent" class="radio-label">5%</label><br>
-          <input type="radio" class="radio-input" id="tenpercent" name="tippercent" value="10">
-          <label for="tenpercent" class="radio-label">10%</label><br>
-          <input type="radio" class="radio-input" id="fifteenpercent" name="tippercent" value="15">
-          <label for="fifteenpercent" class="radio-label">15%</label><br>
-          <input type="radio" class="radio-input" id="twentyfivepercent" name="tippercent" value="25">
-          <label for="twentyfivepercent" class="radio-label">25%</label><br>
-          <input type="radio" class="radio-input" id="fiftypercent" name="tippercent" value="50">
-          <label for="fiftypercent" class="radio-label">50%</label><br>
-          <input type="number" tabindex="-1" class="radio-label" id="custom" name="tippercent" onfocus="this.placeholder=''"
-            onfocusout="this.placeholder='Custom'" placeholder="Custom">
-        </div>
-        <div id="ppl-box">
-          <label for="num-of-ppl" class="form-label">Number of People</label>
-          <span id="zero-case">Can't be zero</span>
-        </div>
-        <div class="form-icon-box">
-          <a href="#" class="icon" tabindex="-1"><img alt="" src="images/icon-person.svg"></a>
-          <input type="number" class="number-input" id="num-of-ppl" placeholder="0">
-        </div>
-      </form>
-      <div class="main-col" id="results-container">
-        <div class="small-box">
-          <h2 class="tip-big">Tip Amount</h2>
-          <h3 class="tip-small">/ person</h3>
-          <h2 class="total" id="tip-per-person">$0.00</h2>
-        </div>
-        <div class="small-box">
-          <h2 class="tip-big">Total</h2>
-          <h3 class="tip-small">/ person</h3>
-          <h2 class="total" id="total-per-person">$0.00</h2>
-        </div>
-        <button id="reset">Reset</button>
       </div>
     </div>
-  </div>
+  </main>
   <script src="app.js"></script>
+</body>
+
 </html>
